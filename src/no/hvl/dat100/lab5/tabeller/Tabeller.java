@@ -11,9 +11,15 @@ public class Tabeller {
 
 	// b)
 	public static String tilStreng(int[] tabell) {
-
-		// TODO
-		throw new UnsupportedOperationException("tilStreng ikke implementert");
+		String tabellStr = "[";
+		for (int i = 0; i<tabell.length; i++) {
+			if (i >= tabell.length-1) {
+				tabellStr += tabell[i];
+			} else {
+				tabellStr += tabell[i] + ",";
+			}
+		}
+		return tabellStr + "]";
 		
 	}
 
@@ -41,9 +47,13 @@ public class Tabeller {
 
 	// f)
 	public static int[] reverser(int[] tabell) {
-
-		// TODO
-		throw new UnsupportedOperationException("reverser ikke implementert");
+		int[] reversertTab = new int[tabell.length];
+		int pos = tabell.length-1;
+		for (int i : tabell) {
+			reversertTab[pos] = i;
+			pos--;
+		}
+		return reversertTab;
 		
 	}
 
