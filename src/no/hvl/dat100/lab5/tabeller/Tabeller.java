@@ -25,16 +25,36 @@ public class Tabeller {
 
 	// c)
 	public static int summer(int[] tabell) {
+		int summert = 0;
+		//vanlig for-løkke
+		/*for (int i = 0; i < tabell.length; i++) {
+			summert += tabell[i];
+		}
+		*/
 
-		// TODO
-		throw new UnsupportedOperationException("summer ikke implementert");
+		//while-løkke
+		/*int i = 0;
+		while (i < tabell.length) {
+			summert += tabell[i];
+			i++;
+		}*/
+
+		//utvidet for-løkke
+		for (int i : tabell) {
+			summert += i;
+		}
+
+		return summert;
 	}
 
 	// d)
 	public static boolean finnesTall(int[] tabell, int tall) {
-
-		// TODO
-		throw new UnsupportedOperationException("finnesTall ikke implementert");
+		for (int i : tabell) {
+			if (i == tall) {
+				return true;
+			}
+		}
+		return false;
 	}
 
 	// e)
