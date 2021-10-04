@@ -37,10 +37,14 @@ public class Matriser {
 	}
 
 	// d)
-	public static boolean erLik(int[][] a, int[][] b) {
+	public static boolean erLik(int[][] mat1, int[][] mat2) {
+		if(mat1 == mat2) {
+			return true;
 
-		// TODO
-		throw new UnsupportedOperationException("erLik ikke implementert");
+		} else {
+			return false;
+
+		}
 	}
 	
 	// e)
